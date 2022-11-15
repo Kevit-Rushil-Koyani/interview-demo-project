@@ -1,0 +1,409 @@
+{
+	"info": {
+		"_postman_id": "a443ff5b-e71f-45ec-b48c-8b08f6536c2e",
+		"name": "New",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16538540"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get User List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/users/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get User List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/users/",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"users",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "736"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2e0-WgDPkPwDjuy8veSBVWV7QXBDaKw\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Nov 2022 11:44:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Users fetched successfully\",\n    \"data\": {\n        \"docs\": [\n            {\n                \"_id\": \"637374d1f2ffaf786baa1d5c\",\n                \"name\": \"Rushil Koyani\",\n                \"email\": \"rushil.koyani@kevit.io\"\n            },\n            {\n                \"_id\": \"6373751f606bdf979ca11f17\",\n                \"name\": \"Rushil Koyani\",\n                \"email\": \"rushil.koyani@kevit.io\"\n            },\n            {\n                \"_id\": \"63737521606bdf979ca11f19\",\n                \"name\": \"Rushil Koyani\",\n                \"email\": \"rushil.koyani@kevit.io\"\n            },\n            {\n                \"_id\": \"63737523606bdf979ca11f1b\",\n                \"name\": \"Rushil Koyani\",\n                \"email\": \"rushil.koyani@kevit.io\"\n            },\n            {\n                \"_id\": \"6373755b88333d11ad5e4127\",\n                \"name\": \"Rushil Koyani\",\n                \"email\": \"rushil.koyani@kevit.io\"\n            },\n            {\n                \"_id\": \"6373755d88333d11ad5e4129\",\n                \"name\": \"Rushil Koyani\",\n                \"email\": \"rushil.koyani@kevit.io\"\n            },\n            {\n                \"_id\": \"63737a953d503faaa67d25b7\",\n                \"name\": \"Rushil Koyani\",\n                \"email\": \"rushil.koyani@kevitt.io\"\n            }\n        ],\n        \"total\": 7,\n        \"page\": 1,\n        \"limit\": 15,\n        \"pages\": 1\n    }\n}"
+						},
+						{
+							"name": "Add User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"demo user\",\n    \"email\":\"demo@user.com\",\n    \"contactNumber\": \"8475683649\",\n    \"password\":\"demo@123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/users/",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"users",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "82"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"52-qLP4hB3xDm9CPFeyqkzfl6GE+AA\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Nov 2022 11:46:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User added successfully\",\n    \"data\": {\n        \"userId\": \"63737c213d503faaa67d25bb\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Add User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"demo user\",\n    \"email\":\"demo@user.com\",\n    \"contactNumber\": \"8475683649\",\n    \"password\":\"demo@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/users/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"demo user\",\n    \"email\":\"demo@user.com\",\n    \"contactNumber\": \"8475683649\",\n    \"password\":\"demo@123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/users/",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"users",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "82"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"52-qLP4hB3xDm9CPFeyqkzfl6GE+AA\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Nov 2022 11:46:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User added successfully\",\n    \"data\": {\n        \"userId\": \"63737c213d503faaa67d25bb\"\n    }\n}"
+						},
+						{
+							"name": "User Exists",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"demo user\",\n    \"email\":\"demo@user.com\",\n    \"contactNumber\": \"8475683649\",\n    \"password\":\"demo@123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/users/",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"users",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21-iGErLku/9taeeOQN+9qwFgLXnuo\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Nov 2022 11:48:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User already exists\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"demo@user.com\",\n    \"password\":\"demo@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/auth/login/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"auth",
+								"login",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"demo@user.com\",\n    \"password\":\"demo@123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/auth/login/",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"auth",
+										"login",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"29-BED6P71l+gILNy4voij+dHFf5oU\""
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "connect.sid=s%3Am24PP7NLjGY6rSdmMWGjxIxA0yr3XTJL.zXaHFM28wNh%2BV%2BzxHoe%2Bx83arw8gwjdavG4CAHlosSs; Path=/; HttpOnly"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Nov 2022 12:28:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User logged in successfully\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
