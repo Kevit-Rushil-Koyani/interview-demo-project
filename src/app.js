@@ -25,9 +25,11 @@ app.use(bodyParser.json());
 
 const index = require('./routes/index');
 const user = require('./routes/user.route');
+const auth = require('./routes/auth.route');
 
 app.use('/', index);
 app.use('/users', user);
+app.use('/auth', auth);
 
 //CORS
 app.use(
