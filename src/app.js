@@ -3,7 +3,8 @@
  * *********************************/
 const express = require('express');
 const cors = require('cors');
-const http = require("http");
+const http = require('http');
+let bodyParser = require('body-parser');
 
 /***********************************
  * Helper & Services
@@ -12,14 +13,21 @@ require('dotenv').config();
 const Logger = require('./services/logger');
 
 /***********************************
+ * Database Connection
+ * *********************************/
+require('./db/connection');
+
+/***********************************
  * Express configuration
  * *********************************/
 let app = express();
+app.use(bodyParser.json());
 
 const index = require('./routes/index');
-
+const user = require('./routes/user.route');
 
 app.use('/', index);
+app.use('/users', user);
 
 //CORS
 app.use(
@@ -41,28 +49,27 @@ app.use(
     }),
 );
 
-
-/**
- * Get port from environment and store in Express.
- */
+/***********************************
+ * Get port from environment and store in Express
+ * *********************************/
 const port = process.env.PORT || '3000';
 app.set('port', port);
 
-/**
+/***********************************
  * Create HTTP server.
- */
+ * *********************************/
 const server = http.createServer(app);
 
-/**
+/***********************************
  * Listen on provided port, on all network interfaces.
- */
+ * *********************************/
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
 
-/**
+/***********************************
  * Event listener for HTTP server "error" event.
- */
+ * *********************************/
 function onError(error) {
     if (error.syscall !== 'listen') {
         throw error;
@@ -85,9 +92,9 @@ function onError(error) {
     }
 }
 
-/**
+/***********************************
  * Event listener for HTTP server "listening" event.
- */
+ * *********************************/
 function onListening() {
     const addr = server.address();
     const port = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr.port;
